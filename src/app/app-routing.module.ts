@@ -1,3 +1,5 @@
+import { RegisterPageComponent } from './register-page/register-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 import { AuthGuard } from './helpers/auth.guard';
 import { SecretComponent } from './secret/secret.component';
 import { NgModule } from '@angular/core';
@@ -9,6 +11,14 @@ const routes: Routes = [
     component: SecretComponent,
     canActivate: [AuthGuard],
   },
+  {
+    path: 'login',
+    component: LoginPageComponent,
+  },
+  {
+    path: 'register',
+    component: RegisterPageComponent,
+  }
 ];
 
 @NgModule({
